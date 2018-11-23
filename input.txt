@@ -1,0 +1,29 @@
+
+RealNumber q #
+
+q= 4.44 #
+
+a = 10 #
+b = 5 #
+c = 15 # 
+
+5 | !! | #
+
+
+LIYE ( a = 0 ~ a < 2 ~ a ++ ) { a # }
+
+
+
+
+Kash ( a | > | b )
+    {
+      Kash ( a | < | c )
+   | a | ^ | b #
+      !_Kash
+    a | + | b #
+  }
+     !_Kash
+   a | * | b #
+   
+   
+

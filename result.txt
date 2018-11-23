@@ -1,0 +1,14 @@
+
+valid declaration
+Value of the variable: 4.44	
+Value of the variable: 10	
+Value of the variable: 5	
+Value of the variable: 15	
+factorial value !120
+value of expression: 120
+value of expression: 10
+expression in for loop : 10
+expression in for loop : 10
+|To the power value 32
+
+value of expression in else: 10

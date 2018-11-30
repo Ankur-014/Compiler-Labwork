@@ -1,0 +1,42 @@
+func main fo fc
+so
+	int_a  asifur@a `  asifur@b ` asifur@c ` asifur@c ` asifur@b #
+	asifur@a ~ 8 #
+	asifur@b ~ 4 #
+	asifur@ad ~ 8 #
+	$++ 8 $++ #
+	1 add 12 div 4 mul 4 #
+	18 sub 15 add 8 div 2 mul 5 #
+	Neither fo 5 add 3 sub 8 fc
+		so
+			12 add 8 div 2 #
+		sc
+		
+	Neither fo 5 add 8 fc
+		so
+			4 exp 2 #
+
+		sc
+
+	Neither fo 7 lt 5 fc
+		so
+			2 add 7 add 6 mul 2 sub 18 div 3 #
+		sc
+	Nor
+		so
+			6 add 8 div 4 add 2 mul 3 sub 1 #
+		sc
+		
+		
+	Until fo 2 : 6 fc so 4 add 2 sc
+
+	Till fo 0 gt 5 fc so 4 add 2 sc
+
+	Collection fo 2 fc so option 1 : 4 add 2 # option 2 : 3 add 2 # sc                                        
+	//we try to skip this   
+	/a/Bangladesh is a beautiful
+	country
+	/a/
+
+	
+sc

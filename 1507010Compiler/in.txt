@@ -1,0 +1,43 @@
+mfun main fop fcp
+sop
+	in  variable_a $  variable_b $ variable_c $ variable_c $ variable_b #
+	variable_a @ 8 #
+	variable_b @ 4 #
+	variable_ad @ 8 #
+	inc 8 inc #
+	1 addition 12 division 4 multiplication 4 #
+	18 subtraction 15 addition 8 division 2 multiplication 5 #
+	iff fop 5 addition 3 subtraction 8 fcp
+		sop
+			12 addition 8 division 2 #
+		scp
+		
+	iff fop 5 addition 8 fcp
+		sop
+			4 exponential 2 #
+
+		scp
+
+	iff fop 7 lrt 5 fcp
+		sop
+		
+			2 addition 7 addition 6 multiplication 2 subtraction 18 division 3 #
+		scp
+	or
+		sop
+			6 addition 8 division 4 addition 2 multiplication 3 subtraction 1 #
+		scp
+		
+		
+	flp fop 2 : 6 fcp sop 4 addition 2 scp
+
+	wlp fop 0 grt 5 fcp sop 4 addition 2 scp
+
+	incident fop 2 fcp sop check 1 : 4 addition 2 # check 2 : 3 addition 2 # scp                                        
+	//we try to skip this   
+	/cmnt/Bangladesh is a beautiful
+	country
+	/cmnt/
+
+	
+scp

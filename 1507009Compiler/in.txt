@@ -1,0 +1,42 @@
+func main fbo fbc
+lb
+	int_p  pranto@a ,  pranto@b , pranto@c , pranto@c , pranto@b endl
+	pranto@a = 8 endl
+	pranto@b = 4 endl
+	pranto@ad = 8 endl
+	inc 8 inc endl
+	1 add 12 div 4 mul 4 endl
+	18 sub 15 add 8 div 2 mul 5 endl
+	condition fbo 5 add 3 sub 8 fbc
+		lb
+			12 add 8 div 2 endl
+		rb
+		
+	condition fbo 5 add 8 fbc
+		lb
+			4 power 2 endl
+
+		rb
+
+	condition fbo 7 lt 5 fbc
+		lb
+			2 add 7 add 6 mul 2 sub 18 div 3 endl
+		rb
+	default
+		lb
+			6 add 8 div 4 add 2 mul 3 sub 1 endl
+		rb
+		
+		
+	loop fbo 2 : 6 fbc lb 4 add 2 rb
+
+	until fbo 0 gt 5 fbc lb 4 add 2 rb
+
+	case fbo 2 fbc lb option 1 : 4 add 2 endl option 2 : 3 add 2 endl rb                                        
+	//we try to skip this   
+	/p/Bangladesh is a beautiful
+	country
+	/p/
+
+	
+rb

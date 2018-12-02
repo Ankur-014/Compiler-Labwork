@@ -63,6 +63,7 @@ multiple_line_comment [ ]*[/][a][/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/][a][/]
 	}
 
 "Neither"		{ return IF;}
+"either"	{ return ELIF; }
 "Nor"		{ return ELSE;}
 
 "func "[A-Za-z]+	{ return MAIN; }

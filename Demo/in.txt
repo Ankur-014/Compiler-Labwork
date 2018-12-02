@@ -26,13 +26,41 @@ so
 		so
 			6 add 8 div 4 add 2 mul 3 sub 1 #
 		sc
+	Neither fo 7 gt 5 fc
+		so
+			Neither fo 7 lt 5 fc
+			so
+				7 add 7 add 6 mul 2 sub 18 div 3 #
+			sc
+			Nor
+			so
+				3 add 8 div 4 add 2 mul 3 sub 1 #
+			sc
+			2 add 7 add 6 mul 2 sub 18 div 3 #
+		sc
+	Nor
+		so
+			6 add 8 div 4 add 2 mul 3 sub 1 #
+		sc
 		
+	Neither fo 7 lt 5 fc
+		so
+			2 add 7 add 6 mul 2 sub 18 div 3 #
+		sc
+	either fo 2 gt 1 fc
+		so
+			3 add 4 mul 2 div 2 #
+		sc 
+	Nor
+		so
+			6 add 8 div 4 add 2 mul 3 sub 1 #
+		sc	
 		
 	Until fo 2 : 6 fc so 4 add 2 sc
 
 	Till fo 0 gt 5 fc so 4 add 2 sc
 
-	Collection fo 2 fc so option 1 : 4 add 2 # option 2 : 3 add 2 # sc                                        
+	Collection fo 3 fc so option 1 : 4 add 2 # option 2 : 3 add 2 # noway : 5 exp 2 ## sc                                        
 	//we try to skip this   
 	/a/Bangladesh is a beautiful
 	country

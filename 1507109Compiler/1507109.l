@@ -63,6 +63,7 @@ multiple_line_comment [ ]*[/][s][/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/][s][/]
 	}
 
 "jodi"		{ return IF;}
+"othobajodi"	{return ELIF;}
 "onnothai"		{ return ELSE;}
 
 "kormokando "[A-Za-z]+	{ return MAIN; }

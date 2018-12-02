@@ -27,12 +27,41 @@ bb
 			6 jog 8 vag 4 jog 2 gun 3 biyog 1 @
 		db
 		
+	jodi pbb 7 boro 5 pdb
+		bb
+			jodi pbb 7 soto 5 pdb
+			bb
+				7 jog 7 jog 6 gun 2 biyog 18 vag 3 @
+			db
+			onnothai
+			bb
+				3 jog 8 vag 4 jog 2 gun 3 biyog 1 @
+			db
+			2 jog 7 jog 6 gun 2 biyog 18 vag 3 @
+		db
+	onnothai
+		bb
+			6 jog 8 vag 4 jog 2 gun 3 biyog 1 @
+		db
 		
+	jodi pbb 7 soto 5 pdb
+		bb
+			2 jog 7 jog 6 gun 2 biyog 18 vag 3 @
+		db
+	othobajodi pbb 2 boro 1 pdb
+		bb
+			3 jog 4 gun 2 vag 2 @
+		db 
+	onnothai
+		bb
+			6 jog 8 vag 4 jog 2 gun 3 biyog 1 @
+		db		
+
 	jonno pbb 2 : 6 pdb bb 4 jog 2 db
 
 	jokhon pbb 0 boro 5 pdb bb 4 jog 2 db
 
-	tip pbb 2 pdb bb ghotona 1 : 4 jog 2 @ ghotona 2 : 3 jog 2 @ db                                        
+	tip pbb 3 pdb bb ghotona 1 : 4 jog 2 @ ghotona 2 : 3 jog 2 @ nirupai : 4 sokti 3 @ db                                        
 	//we try to skip this   
 	/s/Bangladesh is a beautiful
 	country

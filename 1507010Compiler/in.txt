@@ -27,13 +27,41 @@ sop
 		sop
 			6 addition 8 division 4 addition 2 multiplication 3 subtraction 1 #
 		scp
+	iff fop 7 grt 5 fcp
+		sop
+			iff fop 7 lrt 5 fcp
+			sop
+				7 addition 7 addition 6 multiplication 2 subtraction 18 division 3 #
+			scp
+			or
+			sop
+				3 addition 8 division 4 addition 2 multiplication 3 subtraction 1 #
+			scp
+			2 addition 7 addition 6 multiplication 2 subtraction 18 division 3 #
+		scp
+	or
+		sop
+			6 addition 8 division 4 addition 2 multiplication 3 subtraction 1 #
+		scp
 		
+	iff fop 7 lrt 5 fcp
+		sop
+			2 addition 7 addition 6 multiplication 2 subtraction 18 division 3 #
+		scp
+	oriff fop 2 grt 1 fcp
+		sop
+			3 addition 4 multiplication 2 division 2 #
+		scp 
+	or
+		sop
+			6 addition 8 division 4 addition 2 multiplication 3 subtraction 1 #
+		scp		
 		
 	flp fop 2 : 6 fcp sop 4 addition 2 scp
 
 	wlp fop 0 grt 5 fcp sop 4 addition 2 scp
 
-	incident fop 2 fcp sop check 1 : 4 addition 2 # check 2 : 3 addition 2 # scp                                        
+	incident fop 1 fcp sop check 1 : 4 addition 2 # check 2 : 3 addition 2 # nop : 3 exponential 2 # scp                                        
 	//we try to skip this   
 	/cmnt/Bangladesh is a beautiful
 	country

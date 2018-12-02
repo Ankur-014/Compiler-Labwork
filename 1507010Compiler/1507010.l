@@ -63,6 +63,7 @@ multiple_line_comment [ ]*[/]"cmnt"[/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/]"cm
 	}
 
 "iff"		{ return IF;}
+"oriff"	{ return ELIF; }
 "or"		{ return ELSE;}
 
 "mfun "[A-Za-z]+	{ return MAIN; }

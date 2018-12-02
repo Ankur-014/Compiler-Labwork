@@ -3,7 +3,7 @@
 %{
 	#include<stdio.h>
 	#include <math.h>
-	int cnt=1,cntt=0,val;
+	int cnt=1,cntt=0,val,track=0;
 	typedef struct entry {
     	char *str;
     	int n;
@@ -23,9 +23,10 @@
 
 %token <number> NUM
 %token <string> VAR 
-%token <string> IF  ELSE MAIN INT FLOAT DOUBLE CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV POW ASSIGN FOR COL WHILE BREAK DEFAULT CASE SWITCH inc 
+%token <string> IF ELIF ELSE MAIN INT FLOAT DOUBLE CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV POW ASSIGN FOR COL WHILE BREAK DEFAULT CASE SWITCH inc 
 %type <string> statement
 %type <number> expression
+%type <number> switch_expression
 %nonassoc IFX
 %nonassoc ELSE
 %left LT GT
@@ -85,7 +86,7 @@ ID1  : ID1 CM VAR	{
      ;
 
 statement: SM
-	| SWITCH LP expression RP LB BASE RB    {printf("SWITCH case.\n");val=$3;} 
+	| SWITCH LP switch_expression RP LB BASE RB    {printf("SWITCH case.\n");val=$3;} 
 
 	| expression SM 			{ printf("\nvalue of expression: %d\n", ($1)); }
 
@@ -127,20 +128,34 @@ statement: SM
 									}
 								   }
 
-	| IF LP expression RP LB IF LP expression RP LB expression SM RB ELSE LB expression SM RB SM RB ELSE LB expression SM RB %prec IFX {
+	| IF LP expression RP LB IF LP expression RP LB expression SM RB ELSE LB expression SM RB expression SM RB ELSE LB expression SM RB %prec IFX {
 								 	if($3)
 									{
 										if($8)
 											printf("\nvalue of expression middle IF: %d\n",$11);
 										else
 											printf("\nvalue of expression middle ELSE: %d\n",$16);
-										
+										printf("\nvalue of expression in first IF: %d\n",$19);
 									}
 									else
 									{
-										printf("\nvalue of expression in else: %d\n",$23);
+										printf("\nvalue of expression in else: %d\n",$24);
 									}
-								   }					   
+								   }
+	| IF LP expression RP LB expression SM RB ELIF LP expression RP LB expression SM RB ELSE LB expression SM RB {
+								 	if($3)
+									{
+										printf("\nvalue of expression in IF: %d\n",$6);
+									}
+									else if($11)
+									{
+										printf("\nvalue of expression in ELIF: %d\n",$14);
+									}
+									else
+									{
+										printf("\nvalue of expression in ELSE: %d\n",$19);
+									}
+								   }									   
 	| FOR LP NUM COL NUM RP LB expression RB     {
 	   int i=0;
 	   for(i=$3;i<$5;i++){
@@ -170,17 +185,19 @@ statement: SM
 				 ;
 
 			Cs    : CASE NUM COL expression SM   {
-						if($2==2){
-							  cntt=1;
+						
+						if(val==$2){
+							  track=1;
 							  printf("\nCase No : %d  and Result :  %d\n",$2,$4);
 						}
 					}
 				 ;
 
-			Dflt    : DEFAULT COL NUM SM    {
-						if(cntt==0){
-							printf("\nResult in default Value is :  %d \n",$3);
+			Dflt    : DEFAULT COL expression SM    {
+						if(track!=1){
+							printf("\nResult in default Value is :  %d\n",$3);
 						}
+						track=0;
 					}
 				 ;    
 	/////////////////////////////
@@ -216,6 +233,31 @@ expression: NUM				{ $$ = $1; 	}
 	| LP expression RP		{ $$ = $2;	}
 	
 	| inc expression inc         { $$=$2+1; printf("inc: %d\n",$$);}
+	;
+	///////////////////////////////////////
+	switch_expression: NUM				{ $$ = $1; val = $$;	}
+
+	| VAR				{ $$ = look_for_key2($1); val = $$;}
+
+	| switch_expression PLUS switch_expression	{ $$ = $1 + $3; val = $$; }
+
+	| switch_expression MINUS switch_expression	{ $$ = $1 - $3; val = $$; }
+
+	| switch_expression MULT switch_expression	{ $$ = $1 * $3;  val = $$;}
+
+	| switch_expression DIV switch_expression	{ 	if($3) 
+				  		{
+				     			$$ = $1 / $3; val = $$;
+				  		}
+				  		else
+				  		{
+							$$ = 0;
+							 val = $$;
+				  		} 	
+				    	}
+	| switch_expression POW switch_expression { $$ = pow($1,$3);  val = $$;}
+
+	
 	;
 %%
 //////////////////////////
